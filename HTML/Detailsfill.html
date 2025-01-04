@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/detailsfill.css">
+  <title>Details Fill</title>
+</head>
+<body>
+  <div class="details-container">
+    <div class="details-form">
+      <h1>Resume Application</h1>
+      <h2>Fill in your details only once and relax!!</h2>
+      <p>Enter your details just as you enter in your job application and we will take care of the rest!</p>
+      <form id="resume-form">
+        <!-- Personal Information -->
+        <h3>Personal Information</h3>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="name">Name<span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-group">
+            <label for="dob">Date of Birth<span class="required">*</span></label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="address">Address<span class="required">*</span></label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+          </div>
+          <div class="input-group">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="Enter your LinkedIn profile URL">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="portfolio">Portfolio URL</label>
+            <input type="url" id="portfolio" name="portfolio" placeholder="Enter your portfolio URL">
+          </div>
+          <div class="input-group">
+            <label for="github">GitHub Profile</label>
+            <input type="url" id="github" name="github" placeholder="Enter your GitHub profile URL">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="veteran-status">Veteran Status</label>
+            <select id="veteran-status" name="veteran_status">
+              <option value="">Select</option>
+              <option value="not_veteran">Not a Veteran</option>
+              <option value="veteran">Veteran</option>
+              <option value="active_military">Active Military</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Gender</label>
+            <div class="radio-group">
+              <label><input type="radio" name="gender" value="male"> Male</label>
+              <label><input type="radio" name="gender" value="female"> Female</label>
+              <label><input type="radio" name="gender" value="non_binary"> Non-binary</label>
+              <label><input type="radio" name="gender" value="prefer_not_say"> Prefer not to say</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="ethnicity">Ethnicity</label>
+            <select id="ethnicity" name="ethnicity">
+              <option value="">Select</option>
+              <option value="hispanic_latino">Hispanic or Latino</option>
+              <option value="white">White</option>
+              <option value="black_african_american">Black or African American</option>
+              <option value="asian">Asian</option>
+              <option value="american_indian_native_alaskan">American Indian or Alaska Native</option>
+              <option value="native_hawaiian_pacific_islander">Native Hawaiian or Other Pacific Islander</option>
+              <option value="other">Other</option>
+              <option value="prefer_not_say">Prefer not to say</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="visa-status">Visa Status</label>
+            <select id="visa-status" name="visa_status">
+              <option value="">Select</option>
+              <option value="citizen">Citizen</option>
+              <option value="permanent_resident">Permanent Resident</option>
+              <option value="work_visa">Work Visa</option>
+              <option value="sponsorship_required">Sponsorship Required</option>
+              <option value="other">Other</option>
+              <option value="prefer_not_say">Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <h3>Education</h3>
+        <div id="education-section">
+          <div class="education-group">
+            <div class="form-row">
+              <div class="input-group">
+                <label for="degree">Degree<span class="required">*</span></label>
+                <input type="text" name="degree[]" placeholder="e.g., Bachelor of Science in Computer Science" required>
+              </div>
+              <div class="input-group">
+                <label for="institution">Institution<span class="required">*</span></label>
+                <input type="text" name="institution[]" placeholder="Enter your institution" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="edu-start-date">Start Date<span class="required">*</span></label>
+                <input type="month" name="edu_start_date[]" required>
+              </div>
+              <div class="input-group">
+                <label for="edu-end-date">End Date</label>
+                <input type="month" name="edu_end_date[]">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="grade">Grade/Percentage</label>
+                <input type="text" name="grade[]" placeholder="Enter your grade or percentage">
+              </div>
+            </div>
+            <button type="button" class="btn remove-btn">- Remove Education</button>
+          </div>
+        </div>
+        <button type="button" id="add-education" class="btn add-btn">+ Add Education</button>
+
+        <!-- Employment History -->
+        <h3>Employment History</h3>
+        <div id="employment-section">
+          <div class="employment-group">
+            <div class="form-row">
+              <div class="input-group">
+                <label for="employer">Employer<span class="required">*</span></label>
+                <input type="text" name="employer[]" placeholder="Enter employer name" required>
+              </div>
+              <div class="input-group">
+                <label for="job-title">Job Title<span class="required">*</span></label>
+                <input type="text" name="job_title[]" placeholder="Enter your job title" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="job-start-date">Start Date<span class="required">*</span></label>
+                <input type="month" name="job_start_date[]" required>
+              </div>
+              <div class="input-group">
+                <label for="job-end-date">End Date</label>
+                <input type="month" name="job_end_date[]">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <label for="responsibilities">Responsibilities</label>
+                <textarea name="responsibilities[]" rows="4" placeholder="Describe your responsibilities"></textarea>
+              </div>
+            </div>
+            <button type="button" class="btn remove-btn">- Remove Employment</button>
+          </div>
+        </div>
+        <button type="button" id="add-employment" class="btn add-btn">+ Add Employment</button>
+
+        <!-- Skills -->
+        <h3>Skills</h3>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="technical-skills">Technical Skills</label>
+            <input type="text" id="technical-skills" name="technical_skills" placeholder="e.g., JavaScript, Python, HTML, CSS">
+          </div>
+          <div class="input-group">
+            <label for="soft-skills">Soft Skills</label>
+            <input type="text" id="soft-skills" name="soft_skills" placeholder="e.g., Communication, Teamwork, Problem Solving">
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <h3>Certifications</h3>
+        <div class="input-group">
+          <label for="certifications">List of Certifications</label>
+          <input type="text" id="certifications" name="certifications" placeholder="e.g., AWS Certified Solutions Architect">
+        </div>
+
+        <!-- References -->
+        <h3>References</h3>
+        <div class="input-group">
+          <label for="references">List of References</label>
+          <textarea id="references" name="references" rows="4" placeholder="Provide references if any"></textarea>
+        </div>
+
+        <!-- Additional Information -->
+        <h3>Additional Information</h3>
+        <div class="input-group">
+          <label for="additional-info">Additional Information</label>
+          <textarea id="additional-info" name="additional_info" rows="4" placeholder="Any other information you want to add"></textarea>
+        </div>
+
+        <button type="submit" class="btn submit-btn">Submit</button>
+      </form>
+      <p class="footer-text">Already have an account? <a href="#">Sign In</a></p>
+    </div>
+  </div>
+
+  <!-- Template for Education -->
+  <template id="education-template">
+    <div class="education-group">
+      <div class="form-row">
+        <div class="input-group">
+          <label for="degree">Degree<span class="required">*</span></label>
+          <input type="text" name="degree[]" placeholder="e.g., Bachelor of Science in Computer Science" required>
+        </div>
+        <div class="input-group">
+          <label for="institution">Institution<span class="required">*</span></label>
+          <input type="text" name="institution[]" placeholder="Enter your institution" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-group">
+          <label for="edu-start-date">Start Date<span class="required">*</span></label>
+          <input type="month" name="edu_start_date[]" required>
+        </div>
+        <div class="input-group">
+          <label for="edu-end-date">End Date</label>
+          <input type="month" name="edu_end_date[]">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-group">
+          <label for="grade">Grade/Percentage</label>
+          <input type="text" name="grade[]" placeholder="Enter your grade or percentage">
+        </div>
+      </div>
+      <button type="button" class="btn remove-btn">- Remove Education</button>
+    </div>
+  </template>
+
+  <!-- Template for Employment -->
+  <template id="employment-template">
+    <div class="employment-group">
+      <div class="form-row">
+        <div class="input-group">
+          <label for="employer">Employer<span class="required">*</span></label>
+          <input type="text" name="employer[]" placeholder="Enter employer name" required>
+        </div>
+        <div class="input-group">
+          <label for="job-title">Job Title<span class="required">*</span></label>
+          <input type="text" name="job_title[]" placeholder="Enter your job title" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-group">
+          <label for="job-start-date">Start Date<span class="required">*</span></label>
+          <input type="month" name="job_start_date[]" required>
+        </div>
+        <div class="input-group">
+          <label for="job-end-date">End Date</label>
+          <input type="month" name="job_end_date[]">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-group">
+          <label for="responsibilities">Responsibilities</label>
+          <textarea name="responsibilities[]" rows="4" placeholder="Describe your responsibilities"></textarea>
+        </div>
+      </div>
+      <button type="button" class="btn remove-btn">- Remove Employment</button>
+    </div>
+  </template>
+
+  <script>
+    // Add Education
+    document.getElementById('add-education').addEventListener('click', function() {
+      const template = document.getElementById('education-template');
+      const clone = template.content.cloneNode(true);
+      document.getElementById('education-section').appendChild(clone);
+    });
+
+    // Add Employment
+    document.getElementById('add-employment').addEventListener('click', function() {
+      const template = document.getElementById('employment-template');
+      const clone = template.content.cloneNode(true);
+      document.getElementById('employment-section').appendChild(clone);
+    });
+
+    // Remove Education or Employment
+    document.addEventListener('click', function(e) {
+      if (e.target && e.target.classList.contains('remove-btn')) {
+        e.target.parentElement.remove();
+      }
+    });
+  </script>
+</body>
+</html>
