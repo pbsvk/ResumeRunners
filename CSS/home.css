@@ -34,25 +34,43 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
 }
-
-.logo {
+.logo-text{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    color: #054365;
+    text-decoration: none;
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
 }
 
+.logo-icon {
+    margin-right: 10px; /* Space between the icon and text */
+    font-size: 1.8rem;
+    color: #ffd700; /* Vibrant gold color */
+}
 .nav-wrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 1.5rem;
-    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between items */
+    list-style: none;
     padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
 }
 
 .nav-links a {
@@ -61,8 +79,10 @@ h1, h2, h3 {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #ffde59; /* Vibrant yellow on hover */
+.nav-links li a:hover {
+    color: #ffa500; /* Change text color on hover */
+    text-decoration: underline; /* Add underline effect on hover */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
 }
 
 /* Buttons */
@@ -94,6 +114,7 @@ h1, h2, h3 {
     background-color: #ffde59; /* Example vibrant color */
     color: #0367a6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: auto;
 }
 
 .get-started-btn:hover {
@@ -152,18 +173,20 @@ h1, h2, h3 {
 }
 
 .service-item {
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff; /* Default background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f0f8ff; /* Light blue background on hover */
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a more pronounced shadow */
 }
+
 
 .about {
     text-align: center;
@@ -256,24 +279,67 @@ h1, h2, h3 {
 
 /* Roadmap section */
 .roadmap {
-    background-color: #f8f9fa;
-    padding: 4rem 0;
+    background: linear-gradient(120deg, #e3f2fd, #bbdefb);
+    padding: 50px 0;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
-.roadmap ul {
-    list-style: none;
-    padding: 0;
-    margin: 2rem auto;
+.roadmap h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1e88e5;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
     max-width: 600px;
-    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.roadmap li {
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    position: relative;
+.timeline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
+.timeline-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #1e88e5;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: #1e88e5;
+    margin: 0;
+}
+
+.timeline-content p {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.promise {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #1e88e5;
+    font-weight: bold;
+}
+
 
 /* Pricing section */
 .pricing {
