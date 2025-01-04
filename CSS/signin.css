@@ -1,0 +1,143 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: white;
+    padding-top: 20px;
+    padding: 0 10px; /* Added for better mobile padding */
+}
+
+.signin-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;  
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Default color */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px; /* Increased font size */
+    font-weight: bold; /* Made text bold */
+    color: #555;
+}
+
+input {
+    width: 90%;
+    padding: 12px; /* Slightly larger padding for inputs */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size */
+    margin-bottom: 20px; /* Added spacing between fields */
+    transition: all 0.3s ease; /* Smooth transitions for input */
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    width: 60%;
+    padding: 14px; /* Increased padding for the button */
+    background-color: red;
+    color: white;
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    transform: skew(-20deg);
+    margin-top: 20px; /* Increased spacing above the button */
+    transition: all 0.3s ease; /* Smooth transitions for button */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px; /* Increased spacing below the button */
+    font-size: 10px;
+    color: #555;
+}
+
+.signup-link a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transitions for links */
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.footer-text{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #fff;
+    }
+    .signin-form {
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 6px rgba(156, 1, 1, 0.5);
+    }
+    input {
+        background-color: #333;
+        border: 1px solid #444;
+        color: #fff;
+    }
+    input:focus {
+        border-color: #da0808;
+    }
+    button {
+        background-color: hsl(0, 86%, 47%);
+    }
+    button:hover {
+        background-color: #ad1e08;
+    }
+    h1 {
+        color: #fff; /* Title color in dark mode */
+    }
+    label{
+        color: #fff; /* Label color in dark mode */
+    }
+}
+
+/* Mobile-friendly padding */
+@media (max-width: 600px) {
+    .signin-container {
+        padding: 0 10px;
+    }
+}
