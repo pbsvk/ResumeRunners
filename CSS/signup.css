@@ -99,13 +99,19 @@ button:hover {
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
+    * {
+        background-color: #000000;
+    }
     body {
         background-color: #121212;
         color: #fff;
     }
+    .signup-container {
+        background-color: #000000;
+    }    
     .signup-form {
-        background-color: #1e1e1e;
-        box-shadow: 0 4px 6px rgba(156, 1, 1, 0.5);
+        background-color: #000000;
+       
     }
     input {
         background-color: #333;
